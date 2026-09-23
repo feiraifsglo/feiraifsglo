@@ -1,0 +1,540 @@
+/* =================================================================
+   1. RESET E VARIÁVEIS GLOBAIS
+   =================================================================== */
+:root {
+  --cor-primaria: #074022;
+  --cor-fundo-hero: #f4efe6;
+  --cor-texto: #333333;
+  --cor-destaque: #76b700;
+  --cor-verde: #074022;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  color: var(--cor-texto);
+  line-height: 1.6;
+  background-image: url("assets/bg.png");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+/* =================================================================
+   2. CABEÇALHO E NAVEGAÇÃO (NAVBAR)
+   =================================================================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #555;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--cor-primaria);
+}
+
+/* Menus Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  list-style: none;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f9f9f9;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* =================================================================
+   3. SEÇÕES GERAIS E TÍTULOS
+   =================================================================== */
+.section-title {
+  background-color: var(--cor-primaria);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+}
+
+.content-section {
+  padding: 60px 10%;
+  background: var(--cor-fundo-hero);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* =================================================================
+   4. HERO SECTION (PÁGINA INICIAL COM 3 IMAGENS)
+   =================================================================== */
+#inicio {
+  margin-top: 70px;
+  padding: 40px 5%;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== HERO SECTION EXPANDIDA ===== */
+/* ===== HERO SECTION COM IMAGEM CENTRAL EM DESTAQUE ===== */
+.hero-container-lateral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  min-height: 75vh;
+  padding: 0 2%;
+}
+
+/* Imagens laterais flexíveis que diminuem ao se ajustar */
+.hero-side-img {
+  flex: 1; /* Permite que encolham e se ajustem proporcionalmente */
+  max-width: 260px; /* Tamanho máximo limite para os lados */
+  min-width: 150px; /* Garante que não sumam em telas médias */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-side-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Imagem central maior e mais rígida no destaque */
+.hero-center-img {
+  flex: 2; /* Dá mais peso proporcional para a imagem central */
+  max-width: 650px; /* Define o tamanho grande principal dela */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-center-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =================================================================
+   5. COMPONENTES: BOTÕES E CARDS
+   =================================================================== */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.btn-primary {
+  background-color: var(--cor-verde);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #6a8868;
+}
+
+.btn-outline {
+  border: 2px solid var(--cor-verde);
+  color: var(--cor-verde);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--cor-verde);
+  color: #fff;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.course-card,
+.program-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--cor-destaque);
+  max-width: 400px;
+}
+
+.course-card h4,
+.program-card h4 {
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--cor-fundo-hero);
+  color: #777;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.schedule-list {
+  list-style: none;
+}
+
+.schedule-list li,
+.course-card .schedule-list li,
+.program-card .schedule-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.schedule-list li:last-child,
+.course-card .schedule-list li:last-child,
+.program-card .schedule-list li:last-child {
+  border-bottom: none;
+}
+
+.programacao-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 5px solid var(--cor-destaque);
+}
+
+.programacao-card h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* =================================================================
+   6. SEÇÃO DE CONTATO
+   =================================================================== */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-info h3 {
+  color: var(--cor-primaria);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #555;
+  font-weight: 600;
+}
+
+.contact-list i {
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+}
+
+.contact-map {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.contact-map iframe {
+  width: 100% !important;
+  max-width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* =================================================================
+   7. LOGOTIPOS (ORGANIZAÇÃO E APOIO)
+   =================================================================== */
+.logos-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 5%;
+  background: var(--cor-fundo-hero);
+  border-radius: 20px;
+}
+
+.logos-apoio {
+  margin-bottom: 0;
+}
+
+.logos-grid img {
+  max-height: 70px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: 0.3s;
+}
+
+.logos-grid img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* =================================================================
+   8. RODAPÉ (FOOTER)
+   =================================================================== */
+footer {
+  background-color: #f9f9f9;
+  padding: 40px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+
+.social-icons a {
+  color: var(--cor-primaria);
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--cor-destaque);
+}
+
+.footer-info {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-logos img {
+  max-height: 50px;
+}
+
+/* =================================================================
+   9. RESPONSIVIDADE (DISPOSITIVOS MÓVEIS)
+   =================================================================== */
+@media (max-width: 900px) {
+  .hero-container-lateral {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 5%;
+  }
+
+  /* Faz a imagem central expandir e ocupar praticamente 100% da largura útil no celular */
+  .hero-center-img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-center-img img {
+    width: 100%;
+    max-height: none;
+  }
+
+  /* Mantém as imagens laterais organizadas e proporcionales no mobile */
+  .hero-side-img {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: #f1f1f1;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: flex;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-map iframe {
+    height: 250px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}

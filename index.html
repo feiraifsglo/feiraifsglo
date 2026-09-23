@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feira de Ciências - IFS Glória</title>
+    <!-- Fonte Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header>
+      <a href="#inicio" class="logo">
+        <img
+          src="assets/logo.png"
+          alt="Logo Feira de Ciências"
+          class="logo-img"
+        />
+      </a>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav>
+        <ul id="nav-list">
+          <li><a href="#inicio">Página inicial</a></li>
+
+          <li class="dropdown">
+            <a href="#sobre"
+              >Sobre a Feira
+              <i class="fas fa-chevron-down" style="font-size: 0.7rem"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#sobre">A Feira</a></li>
+              <li><a href="#instituicao">A Instituição</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#programacao">Programação</a></li>
+          <li><a href="#cursos">Oficinas</a></li>
+
+          <li class="dropdown">
+            <a href="#edital"
+              >Participe
+              <i class="fas fa-chevron-down" style="font-size: 0.7rem"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="#edital">Edital e Inscrições</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#contato">Contato</a></li>
+          <li>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/feiradecienciasifsgloria/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- SEÇÃO HERO (INÍCIO) -->
+      <section id="inicio">
+        <div class="hero-container-lateral">
+          <!-- Imagem da Esquerda -->
+          <div class="hero-side-img left">
+            <img src="assets/save.png" alt="Imagem Esquerda" />
+          </div>
+
+          <!-- Imagem Central (vaca2.png) -->
+          <div class="hero-center-img">
+            <img src="assets/vaca4.png" alt="Ilustração Central" />
+          </div>
+
+          <!-- Imagem da Direita -->
+          <div class="hero-side-img right">
+            <a href="#edital">
+              <img src="assets/info.png" alt="Imagem Direita" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO SOBRE A FEIRA -->
+      <div id="sobre" class="section-title">SOBRE A FEIRA</div>
+      <section class="content-section">
+        <div class="text-center" style="margin-bottom: 40px">
+          <p>
+            No dia 27 de outubro de 2026, o IFS Câmpus Glória será palco de
+            muita ciência, conhecimento e troca de experiências. Esse ano nós
+            contamos com apoio via edital e teremos um evento maior, contando
+            com a participação de outras escolas. Além disso, o evento ocorrerá
+            conjuntamente com os tradicionais eventos Agroali e Workshop do Dia
+            do Leite. <br /><br />Marque na agenda e venha fazer parte dessa
+            história! <br /><br />Esse ano nosso tema será:<br />
+            <strong
+              >"CIÊNCIA: Substantivo Feminino - Mulheres e meninas mudando a
+              ciência do Alto Sertão Sergipano"</strong
+            >
+          </p>
+        </div>
+
+        <div
+          id="instituicao"
+          class="info-card"
+          style="max-width: 800px; margin: 0 auto"
+        >
+          <h3><i class="fas fa-university"></i> A Instituição</h3>
+          <p>
+            O Instituto Federal de Sergipe (IFS) – Campus Glória, consolidado
+            como um pilar estratégico para o desenvolvimento educacional e
+            socioeconômico do alto sertão sergipano, atua fortemente na
+            articulação entre ensino, pesquisa aplicada e extensão para promover
+            a inovação tecnológica e sustentável. Oferecendo uma infraestrutura
+            moderna com salas equipadas, laboratórios especializados e áreas de
+            vivência, o campus destaca-se pela democratização do acesso à
+            educação pública e de excelência por meio de cursos técnicos e
+            superiores, além de promover eventos científicos e tecnológicos de
+            grande relevância regional.
+          </p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO PROGRAMAÇÃO -->
+      <div id="programacao" class="section-title">PROGRAMAÇÃO</div>
+      <section class="content-section">
+        <div class="text-center" style="margin-bottom: 30px">
+          <p>Confira os horários e atividades programadas para o evento.</p>
+        </div>
+
+        <div class="programacao-card">
+          <h3><i class="far fa-clock"></i> Cronograma do Evento</h3>
+          <ul class="schedule-list">
+            <li><strong>07:30</strong> - Organização dos estandes</li>
+            <li><strong>08:30</strong> - Abertura do evento</li>
+            <li>
+              <strong>09:00</strong> - Exposição e interação entre os presentes
+              e Avaliação dos trabalhos / Palestras, minicursos e/ou oficinas
+            </li>
+            <li><strong>12:00</strong> - Intervalo para almoço</li>
+            <li>
+              <strong>13:00</strong> - Exposição e interação entre os presentes
+              e Avaliação dos trabalhos / Palestras, minicursos e/ou oficinas
+            </li>
+            <li>
+              <strong>16:00</strong> - Apuração dos resultados por parte da
+              comissão da 1ª Feira de Ciências do IFS Campus Glória
+            </li>
+            <li>
+              <strong>17:00</strong> - Premiação e encerramento oficial do
+              evento.
+            </li>
+            <li><strong>17:30</strong> - Desmontagem dos trabalhos.</li>
+          </ul>
+          <span
+            class="tag"
+            style="display: block; width: fit-content; margin: 15px auto 0 auto"
+            >Data: 27 de Outubro de 2026</span
+          >
+        </div>
+      </section>
+
+      <!-- SEÇÃO OFICINAS -->
+      <div id="cursos" class="section-title">OFICINAS</div>
+      <section class="content-section">
+        <div class="text-center" style="margin-bottom: 30px">
+          <p>
+            Estão listadas abaixo as oficinas que serão oferecidas no dia do
+            evento. Não se esqueça de se inscrever nelas durante a inscrição
+            geral para o evento. Vagas limitadas!
+          </p>
+        </div>
+
+        <div class="programacao-card">
+          <h3><i class="far fa-clock"></i> EM BREVE!!!</h3>
+        </div>
+
+        <!-- <div class="cards-grid">
+          <div class="course-card">
+            <h4>Práticas Inovadoras no Ensino de Ciências</h4>
+            <p>
+              Oficina prática abordando a utilização de materiais recicláveis
+              para experimentos de física e química em sala de aula.
+            </p>
+            <span class="tag">Duração: 4h</span>
+          </div>
+          <div class="course-card">
+            <h4>Biodiversidade do Cerrado</h4>
+            <p>
+              Curso focado no reconhecimento da flora e fauna locais, com
+              estratégias pedagógicas para o ensino fundamental.
+            </p>
+            <span class="tag">Duração: 4h</span>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- SEÇÃO EDITAL E INSCRIÇÕES -->
+      <div id="edital" class="section-title">EDITAL E INSCRIÇÕES</div>
+      <section class="content-section text-center">
+        <p style="font-size: 1.2rem; margin-bottom: 20px">
+          A inscrição no evento e a submissão de trabalhos para a Feira de
+          Ciências do IFS Câmpus Glória está aberta. <br />Leia o edital
+          atentamente antes de realizar a inscrição da sua equipe.
+        </p>
+        <p style="margin-bottom: 40px; color: #555">
+          Prazo limite para inscrições: <strong>9 de Outubro de 2026</strong>
+        </p>
+
+        <div class="action-buttons">
+          <a
+            href="https://drive.google.com/drive/folders/10Rvbe_JU4zCm-wsazTEboBk0220wnDYY?usp=sharing"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            <i class="far fa-file-pdf"></i> Baixar Edital e Anexos
+          </a>
+          <a
+            href="https://suap.ifs.edu.br/eventos/inscricao/1/830/"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fas fa-edit"></i> Fazer Inscrição
+          </a>
+        </div>
+      </section>
+
+      <!-- SEÇÃO CONTATO -->
+      <div id="contato" class="section-title">CONTATO</div>
+      <section class="content-section">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Fale Conosco</h3>
+            <p>
+              Tem dúvidas sobre o edital, inscrições ou sobre o evento? Entre em
+              contato com a comissão organizadora ou venha nos visitar.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Estrada para Monte Alegre,
+                S/N - Pov. Piabas, Nossa Senhora da Glória - SE
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                feiradecienciasifsgloria@gmail.com
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14398.237877887224!2d-37.438437228588874!3d-10.197527876305708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70f785ee8f670fd%3A0x9c819290d130b558!2sFederal%20Institute%20De%20Sergipe%20-%20Campus%20Glory!5e1!3m2!1sen!2sbr!4v1789934178979!5m2!1sen!2sbr"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO ORGANIZAÇÃO -->
+      <div class="section-title">ORGANIZAÇÃO</div>
+      <section class="logos-grid">
+        <a href="https://www.ifs.edu.br/gloria.html" target="_blank">
+          <img src="assets/gloria.png" alt="IFS Câmpus Glória" />
+        </a>
+      </section>
+
+      <!-- SEÇÃO APOIO
+      <div class="section-title">APOIO</div>
+      <section class="logos-grid logos-apoio">
+        <img
+          src="https://via.placeholder.com/150x60/ffffff/18638b?text=SEBRAE"
+          alt="Sebrae"
+        />
+        <img
+          src="https://via.placeholder.com/150x60/ffffff/e38a59?text=Inst.+Cerradão"
+          alt="Instituto Cerradão"
+        />
+        <img
+          src="https://via.placeholder.com/150x60/ffffff/333?text=Prefeitura"
+          alt="Prefeitura"
+        />
+        <img
+          src="https://via.placeholder.com/150x60/ffffff/18638b?text=CAPES"
+          alt="CAPES"
+        />
+      </section> -->
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+      <div class="footer-info">
+        <p><strong>IFS - Câmpus Glória</strong></p>
+        <p>
+          &copy; 2026 Feira de Ciências do IFS Câmpus Glória. Todos os direitos
+          reservados.
+        </p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/feiradecienciasifsgloria/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- Arquivo JS Externo -->
+    <script src="script.js"></script>
+  </body>
+</html>
